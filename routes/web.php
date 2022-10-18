@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApprenantsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('index');
-});
+Route::get('/saveApprenantsRoute', [ApprenantsController::class, 'show'])->name('saveApprenants');
+Route::post('/addApprentans', [ApprenantsController::class, 'addApprenants'])->name('saveApprenants');
