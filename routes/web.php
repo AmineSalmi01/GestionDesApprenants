@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApprenantsController;
+use App\Http\Controllers\ShowApprenants;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/saveApprenantsRoute', [ApprenantsController::class, 'show'])->name('saveApprenants');
-Route::post('/addApprentans', [ApprenantsController::class, 'addApprenants'])->name('saveApprenants');
+// Route::get('/saveApprenantsRoute', [ApprenantsController::class, 'show'])->name('saveApprenants');
+// Route::post('/addApprentans', [ApprenantsController::class, 'addApprenants'])->name('saveApprenants');
 
 
 // ///////// routing (Route Parammetre, csrf Protection) /////////// 
@@ -37,3 +38,8 @@ Route::post('/addApprentans', [ApprenantsController::class, 'addApprenants'])->n
 
 // // Route::get('/Promotion{id}', [ApprenantsController::class, 'addId']);
 // Route::get('/apprenants/{name}', [ApprenantsController::class, 'addId']);
+
+
+/// route for invoke controller :
+Route::get('/userForm', [ApprenantsController::class, 'show'])->name('userRout');
+Route::get('/user', ShowApprenants::class)->name('send');
