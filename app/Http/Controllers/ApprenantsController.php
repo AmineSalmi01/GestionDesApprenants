@@ -11,10 +11,16 @@ class ApprenantsController extends Controller
         return view('index');
     }
 
-    // public function addApprenants(Request $request){
-    //     \Log::info(json_encode($request->all()));
-    //     return view('index');
-    // }
+    public function select(){
+        $data = ListApprenant::all();
+        return view('index', compact('data'));
+    }
+    public function insertData(Request $request){
+        $obj_models = new ListApprenant();
+        $obj_models->name = $request->input;
+        $obj_models->save();
+        return redirect('Save_page');
+    }
 
     // public function addId($name){
     //     $data = [

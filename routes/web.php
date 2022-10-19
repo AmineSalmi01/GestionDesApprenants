@@ -19,8 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/saveApprenantsRoute', [ApprenantsController::class, 'show'])->name('saveApprenants');
-// Route::post('/addApprentans', [ApprenantsController::class, 'addApprenants'])->name('saveApprenants');
+Route::get('/Save_page', [ApprenantsController::class, 'select'])->name('getRoute');
+Route::post('/insert', [ApprenantsController::class, 'insertData'])->name('insert');
+
+
 
 
 // ///////// routing (Route Parammetre, csrf Protection) /////////// 
@@ -41,5 +43,5 @@ Route::get('/', function () {
 
 
 /// route for invoke controller :
-Route::get('/userForm', [ApprenantsController::class, 'show'])->name('userRout');
-Route::get('/user', ShowApprenants::class)->name('send');
+// Route::get('/userForm', [ApprenantsController::class, 'show'])->name('userRout');
+// Route::get('/user', ShowApprenants::class)->name('send');

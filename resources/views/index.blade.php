@@ -8,13 +8,17 @@
 </head>
 <body>
     
-    <form action="{{ route('send') }}" method="GET">
+    <form method="post" action="{{ route('insert') }}">
         <!-- {{ csrf_field() }} -->
         
-        
+        @csrf
         <input type="text" name="input">
         <button type="submit">Save</button>
     </form>
+
+    @foreach ($data as $row)
+        <div> apprenants : {{ $row->name }} </div>
+    @endforeach
     
     
 </body>
