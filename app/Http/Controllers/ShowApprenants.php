@@ -16,6 +16,5 @@ class ShowApprenants extends Controller
     {
         $name = $request->input("input");
         return $name;
-        return redirect('/userForm');
     }
 }
