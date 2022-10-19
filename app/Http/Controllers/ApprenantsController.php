@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ListApprenant;
 
 class ApprenantsController extends Controller
 {
@@ -10,7 +11,18 @@ class ApprenantsController extends Controller
         return view('index');
     }
 
-    public function addApprenants(){
+    public function addApprenants(Request $request){
+        \Log::info(json_encode($request->all()));
         return view('index');
     }
+
+    // public function addId($name){
+    //     $data = [
+    //         'amine'=>'amine',
+    //         'mohamed'=>'mohamed'
+    //     ];
+    //     return view('index', [
+    //         'apprenants' => $data[$name]
+    //     ]);
+    // }
 }

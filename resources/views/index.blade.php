@@ -7,12 +7,14 @@
     <title>Amine Salmi</title>
 </head>
 <body>
-    <form action="/user" method="post">
+    <form action="{{ route('saveApprenants') }}" method="post">
         <!-- {{ csrf_field() }} -->
         @csrf
         
         <input type="text" name="input">
         <button type="submit">Save</button>
     </form>
+
+    
 </body>
 </html>

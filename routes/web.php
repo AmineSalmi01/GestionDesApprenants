@@ -14,21 +14,26 @@ use App\Http\Controllers\ApprenantsController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/saveApprenantsRoute', [ApprenantsController::class, 'show'])->name('saveApprenants');
+Route::post('/addApprentans', [ApprenantsController::class, 'addApprenants'])->name('saveApprenants');
+
+
+// ///////// routing (Route Parammetre, csrf Protection) /////////// 
+
+// Route::get('/request', function (){
+//     return view('index');
 // });
 
-// Route::get('/saveApprenantsRoute', [ApprenantsController::class, 'show'])->name('saveApprenants');
-// Route::post('/addApprentans', [ApprenantsController::class, 'addApprenants'])->name('saveApprenants');
+// use Illuminate\Http\Request;
 
+// Route::any('/user', function (Request $request) {
+//     $name = $request->input("input");
+//     return $name;
+// });
 
-Route::get('/request', function (){
-    return view('index');
-});
-
-use Illuminate\Http\Request;
-
-Route::any('/user', function (Request $request) {
-    $name = $request->input("input");
-    return $name;
-});
+// // Route::get('/Promotion{id}', [ApprenantsController::class, 'addId']);
+// Route::get('/apprenants/{name}', [ApprenantsController::class, 'addId']);
