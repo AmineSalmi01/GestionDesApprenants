@@ -28,7 +28,7 @@ Route::post('/insert', [ApprenantsController::class, 'insertData'])->name('inser
 // ///////// routing (Route Parammetre, csrf Protection) /////////// 
 
 // Route::get('/request', function (){
-//     return view('index');
+//     return view('helloworld');
 // });
 
 // use Illuminate\Http\Request;
@@ -36,6 +36,9 @@ Route::post('/insert', [ApprenantsController::class, 'insertData'])->name('inser
 // Route::any('/user', function (Request $request) {
 //     $name = $request->input("input");
 //     return $name;
+// });
+// Route::get('hello', function(){
+//     return view('helloworld');
 // });
 
 // // Route::get('/Promotion{id}', [ApprenantsController::class, 'addId']);

@@ -10,6 +10,7 @@
     
     <form method="post" action="{{ route('insert') }}">
         <!-- {{ csrf_field() }} -->
+        {{-- {{ csrf_token() }} --}}
         
         @csrf
         <input type="text" name="input">
